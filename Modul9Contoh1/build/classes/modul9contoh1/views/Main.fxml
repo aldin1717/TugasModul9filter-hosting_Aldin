@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:x="http://javafx.com/fxml/1"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="modul9contoh1.controllers.MainController">
+    <children>
+        
+        <!-- Tombol Filter -->
+        <Button fx:id="btnFilter" layoutX="830.0" layoutY="35.0"
+                onAction="#handleBtnFilter" text="Filter" />
+        
+        <!-- DatePicker untuk filter tanggal mulai -->
+        <DatePicker fx:id="dpcDari" layoutX="36.0" layoutY="35.0"
+                    prefHeight="25.0" prefWidth="185.0"
+                    promptText="Dari Tanggal Pengadaan" />
+        
+        <!-- DatePicker untuk filter tanggal akhir -->
+        <DatePicker fx:id="dpcSampai" layoutX="231.0" layoutY="35.0"
+                    prefHeight="25.0" prefWidth="191.0"
+                    promptText="Sampai Tanggal Pengadaan" />
+        
+        <!-- TextField untuk filter judul buku -->
+        <TextField fx:id="txtJudul" layoutX="437.0" layoutY="35.0"
+                   prefHeight="25.0" prefWidth="185.0"
+                   promptText="Judul Buku" />
+        
+        <!-- ComboBox untuk memilih kategori buku -->
+        <ComboBox fx:id="cbxKategori" layoutX="632.0" layoutY="35.0"
+                  prefHeight="25.0" prefWidth="191.0"
+                  promptText="Kategori Buku" />
+        
+        <!-- TableView untuk menampilkan data buku -->
+        <TableView fx:id="tblViewBuku" layoutX="13.0" layoutY="84.0"
+                   prefHeight="506.0" prefWidth="996.0">
+            <columns>
+                <TableColumn fx:id="colKodeBuku" prefWidth="75.0" text="Kode Buku" />
+                <TableColumn fx:id="colKategori" prefWidth="160.0" text="Kategori" />
+                <TableColumn fx:id="colJudul" prefWidth="250.0" text="Judul" />
+                <TableColumn fx:id="colPengarang" minWidth="0.0" prefWidth="97.0" text="Pengarang" />
+                <TableColumn fx:id="colPenerbit" prefWidth="113.0" text="Penerbit" />
+                <TableColumn fx:id="colTahun" prefWidth="101.0" text="Tahun Terbit" />
+                <TableColumn fx:id="colEdisi" prefWidth="72.0" text="Edisi" />
+                <TableColumn fx:id="colPengadaan" prefWidth="127.0" text="Tanggal Pengadaan" />
+            </columns>
+        </TableView>
+        
+    </children>
+</AnchorPane>
