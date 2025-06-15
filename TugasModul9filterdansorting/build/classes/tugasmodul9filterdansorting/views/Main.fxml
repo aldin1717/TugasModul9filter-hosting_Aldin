@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="tugasmodul9filterdansorting.controllers.MainController">
+    <children>
+        <DatePicker fx:id="datePickerFrom" layoutX="30.0" layoutY="20.0" prefWidth="150.0" promptText="Dari Tanggal Pengadaan"/>
+        <DatePicker fx:id="datePickerTo" layoutX="200.0" layoutY="20.0" prefWidth="150.0" promptText="Sampai Tanggal Pengadaan"/>
+        <ComboBox fx:id="cbxKategori" layoutX="370.0" layoutY="20.0" prefWidth="150.0"/>
+        <ComboBox fx:id="cbxSorting" layoutX="530.0" layoutY="20.0" prefWidth="150.0"/>
+        <Button fx:id="btnFilter" layoutX="690.0" layoutY="20.0" text="Filter &amp; Sort" onAction="#handleFilterAndSort"/>
+        <Button fx:id="btnReset" layoutX="800.0" layoutY="20.0" text="Reset" onAction="#handleReset"/>
+
+        <TableView fx:id="tblViewBuku" layoutX="20.0" layoutY="60.0" prefHeight="520.0" prefWidth="984.0">
+            <columns>
+                <TableColumn fx:id="colKodeBuku" text="Kode Buku" prefWidth="80.0"/>
+                <TableColumn fx:id="colKategori" text="Kategori" prefWidth="150.0"/>
+                <TableColumn fx:id="colJudul" text="Judul" prefWidth="200.0"/>
+                <TableColumn fx:id="colPengarang" text="Pengarang" prefWidth="150.0"/>
+                <TableColumn fx:id="colPenerbit" text="Penerbit" prefWidth="100.0"/>
+                <TableColumn fx:id="colTahun" text="Tahun Terbit" prefWidth="80.0"/>
+                <TableColumn fx:id="colEdisi" text="Edisi" prefWidth="50.0"/>
+                <TableColumn fx:id="colPengadaan" text="Tanggal Pengadaan" prefWidth="150.0"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
